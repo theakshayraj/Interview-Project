@@ -1,5 +1,5 @@
 provider "aws" {
-  profile = "manan"
+  profile = "acko"
   region = var.region
 }
 

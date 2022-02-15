@@ -13,7 +13,7 @@ module "network" {
 module "nlb" {
   source        = "./modules/nlb/"
   vpc_nlb       = module.network.vpc_id_all
-  sec_group_nlb = module.network.security_group_id_asg
+  sec_group_nlb = module.network.security_group_id_asg 
   subnet_nlb    = module.network.public_sn_asg
 }
 

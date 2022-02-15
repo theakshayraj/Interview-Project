@@ -2,24 +2,13 @@
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
 
-  name                 = "project-vpc"
-  cidr                 = "10.99.0.0/18"
-  azs             = ["ap-south-1b"]
-  public_subnets  = ["10.99.0.0/24"]
-  private_subnets = ["10.99.3.0/24"]
+  name                 = "interview"
+  cidr                 = "172.32.0.0/16"
+  azs             = ["ap-south-1b", "ap-south-1c", "ap-south-1a"]
+  public_subnets  = ["172.32.6.0/24", "172.32.7.0/24", "172.32.8.0/24"]
+  private_subnets = ["172.32.9.0/24", "172.32.10.0/24", "172.32.11.0/24"]
   enable_dns_hostnames = true
   enable_nat_gateway = true
   single_nat_gateway = true
-
-  tags = {
-    Name = "interview"
-  }
-  private_subnet_tags = {
-    Name = "interview-private-subnet"
-  }
-
-  public_subnet_tags = {
-    Name = "interview-public-subnet"
-  }
 
 }

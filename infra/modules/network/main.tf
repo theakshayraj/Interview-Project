@@ -7,13 +7,13 @@ data "aws_vpc" "int" {
 data "aws_subnet" "private" {
    vpc_id = data.aws_vpc.int.id
    tags = {
-    Name = "interview-private-subnet"
+    Name = "interview-private-ap-south-1b"
   }
 }
 data "aws_subnet" "public" {
    vpc_id = data.aws_vpc.int.id
    tags = {
-    Name = "interview-public-subnet"
+    Name = "interview-public-ap-south-1b"
   }
 }
 
